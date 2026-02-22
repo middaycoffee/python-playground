@@ -1,4 +1,4 @@
-# Simple First Game (Invasion)
+# Invasion
 
 This is a simple 2D game built with Python and the Pygame library. It's my first GitHub project designed as a practice exercise to understand basic game mechanics.
 
