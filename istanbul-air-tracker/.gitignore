@@ -1,0 +1,16 @@
+# Environments
+.env
+
+# Databases
+ist_air_parameters.db
+
+# IDEs
+.vscode/
+
+# Python cache
+__pycache__/    
+
+# Other files
+tester.py
+en_ibb_guide_open_data.pdf
+
