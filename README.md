@@ -9,7 +9,7 @@ An end-to-end data pipeline that extracts live air quality metrics from the Ista
 * **Core Tech:** Python, SQLite, Google Gemini API, REST APIs
 * **Key Features:** ETL pipeline, parameterized SQL, dynamic LLM prompt engineering.
 
-#### [Alien Invasion Game](./invasion_game)
+#### [Alien Invasion Game](./pygame-collision-engine)
 A classic 2D arcade-style shooter built to explore game physics, event handling, and object-oriented design in Python.
 * **Core Tech:** Python, Pygame
 * **Key Features:** Player movement, collision detection, score and dashboard.
