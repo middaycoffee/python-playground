@@ -1,4 +1,5 @@
 import sqlite3
+import logging
 
 DB_NAME = "ist_air_parameters.db"
 
@@ -20,7 +21,7 @@ def setup_database():
                        aqi_index REAL,
                        cont_parameter VARCHAR)""")
 
-def insert_reading(district_name, latest_read):
+def insert_reading(district_name: str, latest_read: dict) -> None:
 
     read_time = latest_read['ReadTime'] 
     pm10 = latest_read["Concentration"]["PM10"]
@@ -41,4 +42,4 @@ def insert_reading(district_name, latest_read):
                        (?,?, ?, ?, ?, ?, ?, ?, ?)""", 
                        (district_name, read_time, pm10, so2, o3, no2, co, aqi_index, contaminant_parameter))
 
-    print(f"Air quality data of {district_name} is succesfully saved to your database: {DB_NAME}")
+    logging.info(f"Succesfully saved {district_name} air metrics to the SQLite database")

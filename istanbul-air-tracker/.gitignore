@@ -13,4 +13,4 @@ __pycache__/
 # Other files
 tester.py
 en_ibb_guide_open_data.pdf
-
+app.log

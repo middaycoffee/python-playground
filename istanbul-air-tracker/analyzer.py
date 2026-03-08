@@ -1,12 +1,13 @@
 import os 
 from dotenv import load_dotenv
 from google import genai
+import logging
 
 load_dotenv()
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-def generate_advice(district, latest_read):
+def generate_advice(district: str, latest_read: dict) -> str | None:
 
     read_time = latest_read['ReadTime'] 
     pm10 = latest_read["Concentration"]["PM10"]
@@ -41,4 +42,5 @@ def generate_advice(district, latest_read):
         contents = prompt
     )
 
+    logging.info(f"Generated health advice for the district {district}")
     return response.text
