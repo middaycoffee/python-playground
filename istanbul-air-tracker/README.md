@@ -21,8 +21,9 @@ Given such excellent air quality, everyone can freely enjoy all outdoor activiti
 have a nice day
 ```
 ### Database Schema
-Extracted data is saved to a relational database with SQLite
+Extracted data is saved to a relational database with SQLite:
 
+![ist_air_parameters.db relational database with parameters table](metrics_example.png)
 ### How to Run Locally
 
 1. Clone the repository:
