@@ -5,8 +5,9 @@ This is a simple data pipeline that extracts live air quality metrics from the [
 
 * **Language:** Python
 * **Data Source:** IBB Open Data REST API
-* **Database:** SQLite 
+* **Database:** SQLite
 * **Generative AI:** `gemini-2.5-flash`
+* **Containerization:** Docker
 
 ### Sample Output
 
@@ -49,3 +50,30 @@ Extracted data is saved to a relational database with SQLite:
    python main.py
    ```
    *The script will automatically initialize the `ist_air_parameters.db` database on its first run.*
+
+### How to Run with Docker
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/middaycoffee/istanbul-air-tracker.git
+   cd istanbul-air-tracker
+   ```
+
+2. Set up your environment variables:
+   * Create a file named `.env` in the root directory.
+   * Add your Gemini API key:
+     ```text
+     GEMINI_API_KEY="your_api_key_here"
+     ```
+
+3. Create the data directory:
+   ```bash
+   mkdir data
+   ```
+
+4. Build and run the container:
+   ```bash
+   docker compose up --build
+   ```
+
+   *The database will be saved to `./data/ist_air_parameters.db` and will persist across container restarts.*

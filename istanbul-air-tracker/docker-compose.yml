@@ -1,0 +1,12 @@
+services:
+  air-etl:
+    build: .
+    container_name: istanbul-air-tracker
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    environment:
+    - TZ=Europe/Istanbul
+    stdin_open: true
+    tty: true

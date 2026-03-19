@@ -2,7 +2,7 @@
 .env
 
 # Databases
-ist_air_parameters.db
+data/
 
 # IDEs
 .vscode/

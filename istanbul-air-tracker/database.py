@@ -1,7 +1,7 @@
 import sqlite3
 import logging
 
-DB_NAME = "ist_air_parameters.db"
+DB_NAME = "data/ist_air_parameters.db"
 
 def setup_database():
     with sqlite3.connect(DB_NAME) as conn: 
